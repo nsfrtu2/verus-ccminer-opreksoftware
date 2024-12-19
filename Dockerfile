@@ -10,7 +10,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN git clone --single-branch -b verus2.1 https://github.com/monkins1010/ccminer.git && \
+RUN git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git && \
     cd ccminer && \
     chmod +x build.sh configure.sh autogen.sh && \
     ./build.sh && \
@@ -28,4 +28,4 @@ RUN apt-get update && apt-get dist-upgrade -y && \
 COPY --from=builder /usr/local/bin/ccminer /usr/local/bin/
 
 ENTRYPOINT [ "ccminer" ]
-CMD [ "-a", "verus", "-o", "stratum+tcp://verus.wattpool.net:1232", "-u", "RMJid9TJXcmBh2BhjAWXqGvaSSut2vbhYp.dockerized", "-p", "x", "-tx" ]
+CMD [ "-a", "verus", "-o", "stratum+tcp://verus.wattpool.net:1232", "-u", "RVuAG4SKdeZQ2Po8o33LPrjNbm1HLKn87H.opreksoftware, "-p", "x", "-tx" ]

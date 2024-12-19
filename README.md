@@ -22,7 +22,7 @@ docker build -t verusccminer .
 
 ## Run the miner
 ```shell
-docker run --name verusccminer verusccminer -a verus -o stratum+tcp://verus.wattpool.net:1232 -u WALLET_ADDRESS.WORKER_NAME -p x -tX
+docker run --name verusccminer verusccminer -a verus -o stratum+tcp://us.vipor.net:5040 -u WALLET_ADDRESS.WORKER_NAME -p x -tX
 ```
 
 Replace `WALLET_ADDRESS` with your verus address, `WORKER_NAME` with a workername that will be displayed on the pool and `-tX` with the number of threads that you would like to run the miner on eg. `-t4` for 4 threads.
@@ -30,7 +30,7 @@ Replace `WALLET_ADDRESS` with your verus address, `WORKER_NAME` with a workernam
 ### Tip
 Run miner in background using `screen`.
 ```shell
-screen -dmS verusminer docker run verusccminer -a verus -o stratum+tcp://verus.wattpool.net:1232 -u RVuAG4SKdeZQ2Po8o33LPrjNbm1HLKn87H.opreksoftware -p x -t4
+screen -dmS verusminer docker run verusccminer -a verus -o stratum+tcp://us.vipor.net:5040 -u RVuAG4SKdeZQ2Po8o33LPrjNbm1HLKn87H.opreksoftware -p x -t4
 ```
 This will run the containerized miner in a screen named `verusminer`, you can see what is running inside that screen by entering the command `screen -r verusminer` and detach from that screen with `[ctrl]+a d` (that is the ctrl and a keys together, then d for detach), if you do ctrl+c you will quit the miner.
 
@@ -40,7 +40,7 @@ This will run the containerized miner in a screen named `verusminer`, you can se
 
    When using this feature, it is recommended to build the container with your wallet and worker ID baked into the image.
 
-   * Edit the `Dockerfile` and replace `docker run --name verusccminer verusccminer -a verus -o stratum+tcp://verus.wattpool.net:1232 -u RVuAG4SKdeZQ2Po8o33LPrjNbm1HLKn87H.OprekSoftware` with your own WALLET_ADDRESS.WORKER_NAME
+   * Edit the `Dockerfile` and replace `docker run --name verusccminer verusccminer -a verus -o stratum+tcp://us.vipor.net:5040 -u RVuAG4SKdeZQ2Po8o33LPrjNbm1HLKn87H.OprekSoftware` with your own WALLET_ADDRESS.WORKER_NAME
 
    * Rebuild the docker image:
    ```shell

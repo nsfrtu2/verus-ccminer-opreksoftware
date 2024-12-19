@@ -16,7 +16,7 @@ git clone https://github.com/opreksoftware/verus-ccminer-opreksoftware.git
 
 ## Build the container
 ```shell
-cd verus-ccminer-dockerized
+cd verus-ccminer-opreksoftware
 docker build -t verusccminer .
 ```
 
